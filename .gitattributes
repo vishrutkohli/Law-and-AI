@@ -1,0 +1,5 @@
+*.p filter=lfs diff=lfs merge=lfs -text
+*.txt filter=lfs diff=lfs merge=lfs -text
+search_engine/static/pickle_files/*.p filter=lfs diff=lfs merge=lfs -text
+search_engine/static/Cases/*.txt filter=lfs diff=lfs merge=lfs -text
+search_engine/static/pickle_files/case_vectors.p filter=lfs diff=lfs merge=lfs -text
