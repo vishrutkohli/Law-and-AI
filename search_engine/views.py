@@ -20,8 +20,8 @@ N_DOC = 910
 # Create your views here.
 try:
 	
-	dict_of_words = pickle.load(open("search_engine/static/pickle_files/dict_of_words.p","rb"))
-	postings = pickle.load(open("search_engine/static/pickle_files/postings.p","rb"))
+	dict_of_words = pickle.load(open("/search_engine/static/pickle_files/dict_of_words.p","rb"))
+	postings = pickle.load(open("/search_engine/static/pickle_files/postings.p","rb"))
 
 except Exception as e:
 	print e
@@ -50,7 +50,7 @@ def vectorise(text,postings):
 #gc.disable()
 #doc_frequency = defaultdict(int)
 N_DOC = 910
-with open("search_engine/static/pickle_files/doc_frequency.p","rb") as f:
+with open("/search_engine/static/pickle_files/doc_frequency.p","rb") as f:
     doc_frequency = pickle.load(f)
 #for item in os.listdir("../Cases"):
 #    if(item[-4:] == '.txt'):
@@ -75,7 +75,7 @@ with open("search_engine/static/pickle_files/doc_frequency.p","rb") as f:
 #            vd = vectorise(f.read(),postings)
 #        case_vectors[item[:-4]] = vd
 
-with open("search_engine/static/pickle_files/case_vectors.p","rb") as f:
+with open("/search_engine/static/pickle_files/case_vectors.p","rb") as f:
     case_vectors = pickle.load(f)
 
 def make_query(query,postings,mode):
@@ -176,4 +176,4 @@ def index(request):
 		print list_of_cases
 		context_dict["list_of_cases"] = list_of_cases
 
-	return render(request,'search_engine/index.html',context_dict)
+	return render(request,'/search_engine/index.html',context_dict)
