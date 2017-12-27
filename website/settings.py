@@ -60,7 +60,7 @@ TEMPLATE_DIRS = (
 WSGI_APPLICATION = 'website.wsgi.application'
 
 STATIC_ROOT = 'staticfiles'
-STATIC_PATH = os.path.join(BASE_DIR,'search_engine/static')
+STATIC_PATH = os.path.join(BASE_DIR,'search_engine/static/')
 
 STATIC_URL = '/static/' 
 
@@ -68,7 +68,7 @@ STATICFILES_DIRS = (
     STATIC_PATH,
 )
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
