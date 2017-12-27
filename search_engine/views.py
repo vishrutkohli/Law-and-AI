@@ -20,8 +20,8 @@ N_DOC = 910
 # Create your views here.
 try:
 	
-	dict_of_words = pickle.load(open("static/pickle_files/dict_of_words.p","rb"))
-	postings = pickle.load(open("static/pickle_files/postings.p","rb"))
+	dict_of_words = pickle.load(open("/usr/desktop/django/website/static/pickle_files/dict_of_words.p","rb"))
+	postings = pickle.load(open("/usr/desktop/django/website/static/pickle_files/postings.p","rb"))
 
 except Exception as e:
 	print e
@@ -75,7 +75,7 @@ with open("/usr/desktop/django/website/doc_frequency.p","rb") as f:
 #            vd = vectorise(f.read(),postings)
 #        case_vectors[item[:-4]] = vd
 
-with open("static/pickle_files/case_vectors.p","rb") as f:
+with open("/usr/desktop/django/website/static/pickle_files/case_vectors.p","rb") as f:
     case_vectors = pickle.load(f)
 
 def make_query(query,postings,mode):
