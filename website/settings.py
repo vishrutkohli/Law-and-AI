@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'search_engine'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -60,7 +61,7 @@ TEMPLATE_DIRS = (
 WSGI_APPLICATION = 'website.wsgi.application'
 
 STATIC_ROOT = 'staticfiles'
-STATIC_PATH = os.path.join(BASE_DIR,'search_engine/static/')
+STATIC_PATH = os.path.join(BASE_DIR,'static/')
 
 STATIC_URL = '/static/' 
 
