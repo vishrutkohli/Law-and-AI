@@ -50,7 +50,7 @@ def vectorise(text,postings):
 #gc.disable()
 #doc_frequency = defaultdict(int)
 N_DOC = 910
-with open("static/pickle_files/doc_frequency.p","rb") as f:
+with open("doc_frequency.p","rb") as f:
     doc_frequency = pickle.load(f)
 #for item in os.listdir("../Cases"):
 #    if(item[-4:] == '.txt'):
